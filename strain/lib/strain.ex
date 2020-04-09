@@ -26,7 +26,6 @@ defmodule Strain do
   end
 
   def reduce([], acc, _f), do: acc
-
   def reduce([head | tail], acc, f) do
     reduce(tail, f.(head, acc), f)
   end
